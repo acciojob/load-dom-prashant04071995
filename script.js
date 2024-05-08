@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(() => {
-    const body = document.querySelector("body");
-    const text = document.createTextNode();
-    body.appendChild(text);
-  }, 1000);
-});
+   // Listen for the DOMContentLoaded event which fires when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.body.children.length === 0) {
+                const textNode = document.createTextNode("DOM load success");
+                document.body.appendChild(textNode);
+            }
+        });
